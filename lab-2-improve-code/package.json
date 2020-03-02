@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "jest ."
+    "test": "jest .",
+    "lint": "./node_modules/.bin/eslint --fix ."
   },
   "husky": {
     "hooks": {
