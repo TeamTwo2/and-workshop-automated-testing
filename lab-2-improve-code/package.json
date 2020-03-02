@@ -24,7 +24,8 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "jest .",
-    "lint": "./node_modules/.bin/eslint --fix ."
+    "test:coverage": "jest . --coverage",
+    "lint": "eslint --fix ."
   },
   "husky": {
     "hooks": {
@@ -36,5 +37,15 @@
       "eslint",
       "git add"
     ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   }
 }
