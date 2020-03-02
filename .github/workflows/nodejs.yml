@@ -12,8 +12,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ./lab-2-improvecode && npm install
-    - run: cd ./lab-2-improvecode && npm run lint
-    - run: cd ./lab-2-improvecode && npm run test:coverage
+    - name: Install deps
+      working-directory: lab-2-improve-code
+      run: npm install
+    - name: Lint
+      working-directory: lab-2-improve-code
+      run: npm run lint
+    - name: Run test coverage
+      working-directory: lab-2-improve-code
+      run: npm run test:coverage
       env:
         CI: true
