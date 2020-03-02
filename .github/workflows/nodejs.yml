@@ -12,8 +12,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd ./lab-2-improvedode && npm install
-    - run: cd ./lab-2-improvedode && npm lint
-    - run: cd ./lab-2-improvedode && npm test:coverage
+    - run: cd ./lab-2-improvecode && npm install
+    - run: cd ./lab-2-improvecode && npm run lint
+    - run: cd ./lab-2-improvecode && npm run test:coverage
       env:
         CI: true
